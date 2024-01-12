@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    
+</head>
+<body>
+    
+    <p id="p1">This is paragraph</p>
+
+    <!-- <script>
+        let p = document.createElement("p");
+        let tx = document.createTextNode("This is a new node");
+        p.appendChild(tx);
+        document.body.appendChild(p);
+    </script> -->
+
+
+    <!-- <script>
+        let days = ["Sunday", "Monday", "Tueday", "Wednesday", "Thursday", "Friday", "Saturday"];
+          
+        let ol1 = document.createElement("ol");
+        ol1.setAttribute('id','ol1');
+        for(day of days){
+            let li = document.createElement("li");
+            li.innerHTML = day;
+            ol1.appendChild(li);
+        }
+        document.body.appendChild(ol1);
+        // เขียน code ไปพร้อมกัน ^__^ 
+        // 
+        
+
+        // สร้าง list
+        // 1.Sunday
+        // 2.Monday
+        // ........
+    </script> -->
+
+    <!--
+    สร้าง Element node ที่เหมือนกับ Element Tag นี้
+     <p>This is a new node</p>
+    -->
+    
+    <!--
+    สร้าง list ที่ เป็นรายชื่อวันในสัปดาห์ 
+     <ol>
+     <li></li>
+     </ol>
+    -->
+
+    <!-- <div id="div1">
+        
+        <p id="p1">JavaScript</p> 
+        <p id="p2">Python</p>
+        <p id="p3">TypeScript</p>
+    </div>
+    <hr>
+    <div id="div2">
+        <p>My favourite fruit.</p>
+    </div>
+    
+
+    <button type="button" onclick="addNode()">Add Node</button>
+    <button type="button" onclick="deleteNode()">Delete Node</button>
+    <button type="button" onclick="addNewImage()">Add Image</button>
+
+    <script> 
+        function addNode() {
+            // <p>a new paragraph</p>
+            let ptag = document.createElement("p");
+            // create text node 
+            let txt = document.createTextNode("a new paragraph");
+            // append text node to a parent node
+            // select a parent node            
+            ptag.appendChild(txt);
+            let parent1 = document.getElementById("div1");
+            // append element node to a parent node
+            
+            parent1.appendChild(ptag);
+            /*  uncomment in step 2 **/
+            // let childP1 = document.getElementById("p1");
+            // parent1.insertBefore(ptag, childP1);
+                       
+        }
+        function addNewImage() {
+            // <img src="http://10.0.15.21/lab/lab4/apples.jpg">
+            let imgtag = document.createElement("img");
+
+            let srcAttr = document.createAttribute("src");
+            srcAttr.value ="http://10.0.15.21/lab/lab4/apples.jpg";           
+            imgtag.setAttributeNode(srcAttr);
+            // method 2
+            //imgtag.setAttribute('src', 'apples.jpg');
+
+            // add to <body>
+            let parent2 = document.getElementById("div2");
+            parent2.appendChild(imgtag);                                   
+        }
+    
+        function deleteNode() {
+            let parent2 = document.getElementById("div1");
+            let delPtag = document.getElementById("p1");
+            parent2.removeChild(delPtag);
+        }
+</script> -->
+
+
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="out"></p>
+
+    <!-- <script>
+        let myObj = {
+        "firstname":"John",
+        "lastname":"Doe",
+        "age":30,
+        "cars":[ "Ford", "BMW", "Fiat" ]
+        };
+
+        document.getElementById("out").innerHTML = myObj.firstname + " " + myObj.lastname + " " +  myObj.age + " " + myObj.cars[0];
+    </script> -->
+
+    <script>
+        getRemoteData("superheroes.json");
+        async function getRemoteData(url) {            
+            let datObject = await fetch(url);
+            let superheroes = await datObject.json();
+           
+            let text = "<h1>" + superheroes.squadName + "</h1>";
+            text += superheroes.homeTown + "<br>";
+
+            for(member of superheroes.members){
+                text += " - " + member.name;
+                text += " (" + member.age + ") <br>";
+                for(power of member.powers){
+                    text += "__ ** " + power + "<br>";
+                }
+            }
+            
+            document.getElementById("out").innerHTML = text;
+        }
+
+    </script>
+</body>
+</html>
